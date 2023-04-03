@@ -1,6 +1,8 @@
-const knocks = ["Knock, knock. Who's there?\n"];
+const knocks = ["-Knock, knock.\n"];
 
-let answers = [
+const who = ["Who's there?\n"]
+
+const answers = [
   "-Ice cream.\n Ice cream who?\n -Ice cream if you don't give me some candy!",
   "-Stopwatch.\n Stopwatch who?\n -Stopwatch you're doing and let me in!",
   "-Spell.\n Spell who?\n -W. H. O.",
@@ -10,13 +12,13 @@ let answers = [
   "-Harry.\n Harry who?\n -Harry up, it’s cold outside!",
   "-Justin.\n Justin who?\n -Justin time for dinner.",
   "-Isabel.\n Isabel who?\n -Isabel working?",
-  "-I am.\n I am who?\n -Wait, you don’t know who you are?",
+  "-I am.\n I am who?\n -Wait, you don’t know who you are?"
 ];
 
 function generateJoke() {
   const answer = answers[Math.floor(Math.random() * answers.length)];
 
-  return `${knocks} ${answer}`;
+  return `${knocks} ${who} ${answer}`;
 }
 
 console.log(generateJoke());
